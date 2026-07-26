@@ -4,9 +4,9 @@ import time
 
 cam = cv2.VideoCapture(0)
 
-mp_hands = mp.solutions.hands
-hands = mp_hands.Hands()
-mp_draw = mp.solutions.drawing_utils
+mp_face_mesh = mp.solutions.face_mesh
+mp_Draw = mp.solutions.drawing_utils
+face_mesh = mp_face_mesh.FaceMesh(max_num_faces=2)
 
 previous_time = time.time()
 frame_count = 0
@@ -20,17 +20,11 @@ while True:
         break
 
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    result = hands.process(rgb_frame)
+    results = face_mesh.process(rgb_frame)
 
-    if result.multi_hand_landmarks:
-        for hand_landmark in result.multi_hand_landmarks:
-            for id, landmark in enumerate(hand_landmark.landmark):
-                h ,w ,c = frame.shape
-                center_x , center_y = int(landmark.x * w) , int(landmark.y * h)
-                print(id ,center_x,center_y)
-                cv2.circle(frame,(center_x,center_y),10,(255,255,0),-1)
-
-            mp_draw.draw_landmarks(frame, hand_landmark, mp_hands.HAND_CONNECTIONS)
+    if results.multi_face_landmarks:
+        for face_landmark in results.multi_face_landmarks:
+            mp_Draw.draw_landmarks(frame,face_landmark,mp_face_mesh.FACEMESH_TESSELATION)
 
     frame_count += 1
     current_time = time.time()
@@ -40,7 +34,7 @@ while True:
         frame_count = 0
         previous_time = current_time
 
-    cv2.putText(frame, str(fps), (20, 50),
+    cv2.putText(frame,f"Fps: {int(fps)}", (20, 50),
                 cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
 
     cv2.imshow('webCam', frame)

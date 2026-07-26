@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97bf3f0b-8ce9-43af-a65e-99b860504cb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Face detection/faceDetection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandTracking/HandTrackingBasic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Advanced CV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Advanced CV.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combined.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaceMesh/faceMesh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/volumeHandControl/voluime hand control.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandTracking/HandTrackingBasic.py" beforeDir="false" afterPath="$PROJECT_DIR$/HandTracking/HandTrackingBasic.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="3AzglSPFJg6BEXL6ePzubIKnwaD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,8 +37,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Combined.executor": "Run",
     "Python.HandTrackingBasic.executor": "Run",
     "Python.faceDetection.executor": "Run",
+    "Python.faceMesh.executor": "Run",
+    "Python.voluime hand control.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
